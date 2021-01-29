@@ -2,10 +2,10 @@ let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
         let data = JSON.parse(this.responseText);
-        document.getElementById('dogimg').src = data.message;
+        document.getElementById('dogimg').src = data.message[0];
+        document.getElementById('dogimg1').src = data.message[1];
+        document.getElementById('dogimg2').src = data.message[2];
         console.log(data.message);
-        
-        
     }
 
 };
@@ -19,9 +19,9 @@ xhr.onreadystatechange = function() {
 // }
 
 
-xhr.open('GET', `https://dog.ceo/api/breeds/image/random`);
+//xhr.open('GET', `https://dog.ceo/api/breeds/image/random`);
 
 
-xhr.send();
+//xhr.send();
 //document.getElementById('load').style.display = "none";
 
