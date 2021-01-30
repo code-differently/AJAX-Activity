@@ -13,9 +13,8 @@ if (this.readyState === 4 && this.status === 200){
     
     }
 }
-
-xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
 let fetch = function(){
+xhr.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
 xhr.send();
 
 }
